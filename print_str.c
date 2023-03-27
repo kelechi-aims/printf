@@ -7,5 +7,16 @@
  */
 int print_str(va_list ap)
 {
-	return (0);
+	char *str = va_arg(ap, char *);
+	int i = 0;
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	while (str[i])
+	{
+		_putchar(str[i++]);
+	}
+	return (i);
 }
