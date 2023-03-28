@@ -26,5 +26,7 @@ int print_b(va_list ap);
 int print_p(va_list ap);
 int print_dec_base(va_list ap);
 int print_int(va_list ap);
+int print_uns_int(va_list ap);
+int Print_uns_oct(va_list ap);
 
 #endif
