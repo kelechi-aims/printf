@@ -19,6 +19,7 @@ int (*check_specifier(const char *format))(va_list)
 		{"u", print_uns_int},
 		{"o", print_uns_oct},
 		{"b", print_b},
+		{"S", print_S},
 		{NULL, NULL}
 	};
 

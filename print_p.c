@@ -11,7 +11,7 @@ int print_p(va_list ap)
 	unsigned int arr[16];
 	unsigned long num, m = 115292150460684976;
 	unsigned int i, result = 0;
-	char *str = "(nill)";
+	char *str = "(nil)";
 
 	num = va_arg(ap, unsigned long);
 	if (num == 0)

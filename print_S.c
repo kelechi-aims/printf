@@ -9,14 +9,14 @@
 int print_S(va_list ap)
 {
 	int count = 0;
-	unsigned int i = 0;
+	unsigned int i;
 	char *str = va_arg(ap, char *);
 
 	if (str = NULL)
 	{
 		str = "(null)";
 	}
-	for (;str[i]; i++)
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
