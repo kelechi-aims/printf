@@ -15,7 +15,7 @@ int print_uns_oct(va_list ap)
 	i[0] = n / m;
 	for (j = 1; j < 11; j++)
 	{
-		m = m / 10;
+		m = m / 8;
 		i[j] = (n / m) % 8;
 	}
 
