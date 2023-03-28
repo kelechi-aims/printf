@@ -19,6 +19,7 @@ typedef struct fun
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int (*check_specifier(const char *format))(va_list);
 int print_char(va_list ap);
 int print_str(va_list ap);
 int print_b(va_list ap);

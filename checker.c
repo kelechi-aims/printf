@@ -12,7 +12,7 @@ int (*check_specifier(const char *format))(va_list)
 	fun_t arr[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"%", print_pcent},
+		{"%", print_p},
 		{"d", print_dec_base},
 		{NULL, NULL}
 	};

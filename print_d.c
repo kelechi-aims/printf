@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_d - A function that prints a decimal base 10
+ * print_dec_base - A function that prints a decimal base 10
  * @ap: integer to print
  * Return: number of printed digits
  */

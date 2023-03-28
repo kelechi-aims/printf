@@ -14,7 +14,7 @@ int print_p(va_list ap)
 	char *str = "(nill)";
 
 	num = va_arg(ap, unsigned long);
-	if (n == 0)
+	if (num == 0)
 	{
 		for (i = 0; str[i]; i++)
 		{
@@ -31,7 +31,7 @@ int print_p(va_list ap)
 	for (i = 1; i < 16; i++)
 	{
 		m = m / 16;
-		arr[i] = (n / m) % 16;
+		arr[i] = (num / m) % 16;
 	}
 	for (i = 0; i < 16; i++)
 	{
