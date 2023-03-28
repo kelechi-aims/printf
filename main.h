@@ -33,5 +33,7 @@ int print_rev_str(va_list ap);
 int print_rot(va_list ap);
 int print_X(va_list ap);
 int print_hex(va_list ap);
+int print_buf(char *buff, unsigned int buffe);
+unsigned int buffer(char *buff, char c, unsigned int buffe);
 
 #endif
