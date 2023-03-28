@@ -21,6 +21,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list ap);
 int print_str(va_list ap);
-int print_pcent(va_list ap);
+int print_b(va_list ap);
+int print_p(va_list ap);
 
 #endif
