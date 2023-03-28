@@ -10,7 +10,7 @@ int print_b(va_list ap)
 	unsigned int binary[32];
 	int j, i = 0, count = 0, res = 0;
 
-	num = va_arg(b, unsigned int);
+	num = va_arg(ap, unsigned int);
 	while (num > 0)
 	{
 		binary[i] = num % 2;
