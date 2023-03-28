@@ -8,32 +8,28 @@
  */
 int print_hex(va_list ap)
 {
-	unsigned int arr[8];
-	unsigned int i, num, m = 268435456, res = 0;
-	char di;
-	int count;
+	unsigned int i[8];
+	unsigned int j, m = 268435456, n, res = 0;
+	char diff;
+	int count = 0;
 
-	num = va_arg(ap, unsigned int);
-	di = 'a' - ':';
-	arr[0] = num / m;
-	for (i = 1; i < 8; i++)
+	n = va_arg(ap, unsigned int);
+	diff = 'a' - ':';
+	i[0] = n / m;
+	for (j = 1; j < 8; j++)
 	{
-		m = m / 16;
-		arr[i] = (num / m) % 16;
+		m /= 16;
+		i[j] = (n / m) % 16;
 	}
-	for (i = 0; i < 8; i++)
+	for (j = 0; j < 8; j++)
 	{
-		res = res + arr[i];
-		if (res || i == 7)
+		res += i[j];
+		if (res || j == 7)
 		{
-			if (arr[i] < 10)
-			{
-				_putchar('0' + arr[i]);
-			}
+			if (i[j] < 10)
+				_putchar('0' + i[j]);
 			else
-			{
-				_putchar('0' + di + arr[i]);
-			}
+				_putchar('0' + diff + i[j]);
 			count++;
 		}
 	}

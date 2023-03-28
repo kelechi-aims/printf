@@ -8,22 +8,20 @@
  */
 int print_S(va_list ap)
 {
+	unsigned int i = 0;
 	int count = 0;
-	unsigned int i;
 	char *str = va_arg(ap, char *);
 
-	if (str = NULL)
-	{
+	if (str == NULL)
 		str = "(null)";
-	}
-	for (i = 0; str[i]; i++)
+	for (; str[i]; i++)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
-			count = count + 2;
-			count = count + print_hex(ap);
+			count += 2;
+			count += print_hex(ap);
 		}
 		else
 		{
