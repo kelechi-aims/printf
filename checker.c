@@ -20,6 +20,8 @@ int (*check_specifier(const char *format))(va_list)
 		{"o", print_uns_oct},
 		{"b", print_b},
 		{"S", print_S},
+		{"r", print_rev_str},
+		{"R", print_rot},
 		{NULL, NULL}
 	};
 
