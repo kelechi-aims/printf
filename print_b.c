@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_b converts a number from decimal to binary
+ * print_b - converts a number from decimal to binary
  * @ap: unsigned integer to convert
  * Return: integer
  */
-int print_b(va_list b
+int print_b(va_list ap)
 {
 	unsigned int num;
 	unsigned int binary[32];
@@ -19,7 +19,7 @@ int print_b(va_list b
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
-		res = _putchar(binary[j]);
+		res = _putchar('0' + binary[j]);
 		count = count + res;
 	}
 	return (count);
