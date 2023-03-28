@@ -12,7 +12,6 @@ int (*check_specifier(const char *format))(va_list)
 	fun_t arr[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"%", print_b},
 		{"p", print_p},
 		{"d", print_dec_base},
 		{"i", print_int},
@@ -22,6 +21,8 @@ int (*check_specifier(const char *format))(va_list)
 		{"S", print_S},
 		{"r", print_rev_str},
 		{"R", print_rot},
+		{"x", print_hex},
+		{"X", print_X},
 		{NULL, NULL}
 	};
 
@@ -29,8 +30,8 @@ int (*check_specifier(const char *format))(va_list)
 	{
 		if (*(arr[i].t) == *format)
 		{
-			return (arr[i].f);
+			break;
 		}
 	}
-	return (NULL);
+	return (arr[i].f);
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_hex - prints a number's ascii value in lowercase
+ * print_hex - prints an ascii value in lowercase
  * hexidecimal
  * @ap: variadic argument
  * Return: integer

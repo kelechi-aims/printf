@@ -31,5 +31,7 @@ int print_uns_oct(va_list ap);
 int print_S(va_list ap);
 int print_rev_str(va_list ap);
 int print_rot(va_list ap);
+int print_X(va_list ap);
+int print_hex(va_list ap);
 
 #endif

@@ -1,39 +1,34 @@
 #include "main.h"
 
 /**
- * print_X - prints a number,s ascii value in uppercase
- * hexadecimal
+ * print_X - prints an ascii value in uppercase hexadecimal
  * @ap: variadic parameter
  * Return: ascii value
  */
 int print_X(va_list ap)
 {
-	unsigned num, m = 268435456, i = 1, res = 0;
-	char di;
-	unsigned arr[8];
-	int count = 0;
-	
-	num = va_arg(ap, unsigned int);
-	di = 'A' - ':';
-	arr[0] = num / m;
-	for (; i < 8 ; i++)
+	unsigned int i[8];
+	unsigned int j, m = 268435456, n, res = 0;
+	char diff;
+	int count;
+
+	n = va_arg(ap, unsigned int);
+	diff = 'A' - ':';
+	i[0] = n / m;
+	for (j = 1; j < 8; j++)
 	{
-		m = m / 16;
-		arr[i] - (num / m ) % 16;
+		m /= 16;
+		i[j] = (n / m) % 16;
 	}
-	for (i =0; i < 8; i++)
+	for (j = 0; j < 8; j++)
 	{
-		res = res + arr[i];
-		if (res || i == 7)
+		res += i[j];
+		if (res || j == 7)
 		{
-			if (arr[i] < 10)
-			{
-				_putchar('0' + arr[i]);
-			}
+			if (i[j] < 10)
+				_putchar('0' + i[j]);
 			else
-			{
-				_putchar('0' + di + arr[i]);
-			}
+				_putchar('0' + diff + i[j]);
 			count++;
 		}
 	}

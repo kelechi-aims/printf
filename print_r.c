@@ -7,7 +7,7 @@
  */
 int print_rev_str(va_list ap)
 {
-	int i, count = 0;
+	int i = 0, count = 0;
 	char *rev;
 
 	rev = va_arg(ap, char *);

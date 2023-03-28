@@ -8,15 +8,15 @@
 int print_p(va_list ap)
 {
 	int count = 0;
-	unsigned int arr[16];
-	unsigned long num, m = 115292150460684976;
-	unsigned int i, result = 0;
+	unsigned int a[16];
+	unsigned int i = 0, res = 0;
+	unsigned long n, m = 1152921504606846976;
 	char *str = "(nil)";
 
-	num = va_arg(ap, unsigned long);
-	if (num == 0)
+	n = va_arg(ap, unsigned long);
+	if (n == 0)
 	{
-		for (i = 0; str[i]; i++)
+		for (; str[i]; i++)
 		{
 			_putchar(str[i]);
 			count++;
@@ -27,21 +27,21 @@ int print_p(va_list ap)
 	_putchar('x');
 	count = 2;
 
-	arr[0] = num / m;
+	a[0] = n / m;
 	for (i = 1; i < 16; i++)
 	{
-		m = m / 16;
-		arr[i] = (num / m) % 16;
+		m /= 16;
+		a[i] = (n / m) % 16;
 	}
 	for (i = 0; i < 16; i++)
 	{
-		result = result + arr[i];
-		if (result || i == 15)
+		res += a[i];
+		if (res || i == 15)
 		{
-			if (arr[i] < 10)
-				_putchar('0' + arr[i]);
+			if (a[i] < 10)
+				_putchar('0' + a[i]);
 			else
-				_putchar('0' + ('a' - ':') + arr[i]);
+				_putchar('0' + ('a' - ':') + a[i]);
 			count++;
 		}
 	}
