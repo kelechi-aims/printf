@@ -13,6 +13,7 @@ int (*check_specifier(const char *format))(va_list)
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_pcent},
+		{"d", print_dec_base},
 		{NULL, NULL}
 	};
 

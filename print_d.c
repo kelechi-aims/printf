@@ -5,34 +5,34 @@
  * @ap: integer to print
  * Return: number of printed digits
  */
-int print_d(va_list ap)
+int print_dec_base(va_list ap)
 {
-	int a[10];
-	int j = 1, m = 1000000000, n, sum = 0, counter = 0;
+	int i[10];
+	int j = 0, m = 1000000000, n, sum = 0, count = 0;
 
-	n = va_arg(i, int);
+	n = va_arg(ap, int);
 	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
-		counter++;
+		count++;
 	}
-	a[0] = n / m;
+	i[0] = n / m;
 
-	for (; j < 10; j++)
+	for (j = 1; j < 10; j++)
 	{
-		m /= 10;
-		a[j] = (n / m) % 10;
+		m = m / 10;
+		i[j] = (n / m) % 10;
 	}
 
 	for (j = 0; j < 10; j++)
 	{
-		sum += a[j];
+		sum = sum + i[j];
 		if (sum != 0 || j == 9)
 		{
-			_putchar('0' + a[j]);
-			counter++;
+			_putchar('0' + i[j]);
+			count++;
 		}
 	}
-	return (counter);
+	return (count);
 }
