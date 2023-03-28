@@ -14,6 +14,7 @@ int (*check_specifier(const char *format))(va_list)
 		{"s", print_str},
 		{"%", print_p},
 		{"d", print_dec_base},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 

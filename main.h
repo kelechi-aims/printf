@@ -25,5 +25,6 @@ int print_str(va_list ap);
 int print_b(va_list ap);
 int print_p(va_list ap);
 int print_dec_base(va_list ap);
+int print_int(va_list ap);
 
 #endif
