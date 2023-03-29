@@ -12,10 +12,6 @@ int print_char(va_list ap)
 
 	if (c == '\0')
 	{
-		return (-1);
-	}
-	else
-	{
 		count = _putchar(c);
 		return (count);
 	}
