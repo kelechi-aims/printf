@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#define UNUSED(x) (void)(x)
+
 /**
  * struct fun - struct op
  * @t: specifier
@@ -35,5 +37,6 @@ int print_X(va_list ap);
 int print_hex(va_list ap);
 int print_buf(char *buff, unsigned int buffe);
 unsigned int buffer(char *buff, char c, unsigned int buffe);
+int print_pcent(va_list ap);
 
 #endif

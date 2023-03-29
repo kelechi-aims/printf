@@ -23,6 +23,7 @@ int (*check_specifier(const char *format))(va_list)
 		{"R", print_rot},
 		{"x", print_hex},
 		{"X", print_X},
+		{"%", print_pcent},
 		{NULL, NULL}
 	};
 
