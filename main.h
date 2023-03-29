@@ -38,5 +38,9 @@ int print_hex(va_list ap);
 int print_buf(char *buff, unsigned int buffe);
 unsigned int buffer(char *buff, char c, unsigned int buffe);
 int print_pcent(va_list ap);
+int print_add(va_list ap);
+int print_less(va_list ap);
+int print_space(va_list ap);
+int print_sharp(va_list ap);
 
 #endif
