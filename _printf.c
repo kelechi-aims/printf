@@ -9,23 +9,31 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	unsigned int i = 0, count = 0, temp = 0;
+	int i = 0, count = 0, temp = 0, flags, printed = 0, printed_chars = 0;
 	int (*f)(va_list);
 
 	if (format == NULL)
 		return (-1);
 	va_start(ap, format);
-	while (*format != '\0' && format[i])
+	for (i = 0; *format != '\0' && format[i]; i++)
 	{
 		if (format[i] != '%')
 		{
 			temp = _putchar(format[i]);
 			count = count + temp;
-			i++;
 			continue;
 		}
 		if (format[i] == '%')
 		{
+			if (format[i] == '%')
+			{
+				flags = print_flags(format, &i);
+				printed = handle_print(format, &i, ap, flags);
+				if (printed == -1)
+					return (-1);
+				printed_chars += printed;
+				return (printed_chars);
+			}
 			if (format[i + 1] == '%')
 			{
 				temp = _putchar('%');
@@ -44,7 +52,6 @@ int _printf(const char *format, ...)
 				continue;
 			}
 		}
-		i++;
 	}
 	va_end(ap);
 	return (count);
