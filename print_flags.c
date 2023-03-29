@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_add - A function that prints +
+ * print_flags - A function that prints +
  * @format: const character
  * @i: integer
  * Return: number of printed digits
