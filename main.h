@@ -8,6 +8,12 @@
 
 #define UNUSED(x) (void)(x)
 
+#define F_MINUS 1
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
+#define F_SPACE 16
+
 /**
  * struct fun - struct op
  * @t: specifier
@@ -39,8 +45,9 @@ int print_buf(char *buff, unsigned int buffe);
 unsigned int buffer(char *buff, char c, unsigned int buffe);
 int print_pcent(va_list ap);
 int print_add(va_list ap);
-int print_less(va_list ap);
+int print_minus(va_list ap);
 int print_space(va_list ap);
 int print_sharp(va_list ap);
+int print_flags(const char *format, int *i);
 
 #endif
