@@ -10,7 +10,11 @@ int print_char(va_list ap)
 	char c = (char)va_arg(ap, int);
 	int count = 0;
 
-	if (c)
+	if (c == '\0')
+	{
+		return (-1);
+	}
+	else
 	{
 		count = _putchar(c);
 		return (count);
