@@ -8,7 +8,6 @@
 int (*check_specifier(const char *format))(va_list)
 {
 	int i;
-
 	fun_t arr[] = {
 		{"c", print_char},
 		{"s", print_str},

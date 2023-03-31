@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, count = 0, temp = 0, flags, printed = 0, printed_chars = 0;
+	int i = 0, count = 0, temp = 0;
 	int (*f)(va_list);
 
 	if (format == NULL)
@@ -25,15 +25,6 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
-			if (format[i] == '%')
-			{
-				flags = print_flags(format, &i);
-				printed = handle_print(format, &i, ap, flags);
-				if (printed == -1)
-					return (-1);
-				printed_chars += printed;
-				return (printed_chars);
-			}
 			if (format[i + 1] == '%')
 			{
 				temp = _putchar('%');
