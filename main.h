@@ -14,9 +14,6 @@
 #define F_HASH 8
 #define F_SPACE 16
 
-#define S_LONG 2
-#define S_SHORT 1
-
 /**
  * struct fun - struct op
  * @t: specifier
@@ -51,10 +48,5 @@ int print_add(va_list ap);
 int print_minus(va_list ap);
 int print_space(va_list ap);
 int print_sharp(va_list ap);
-int print_flags(const char *format, int *i);
-int print_width(const char *format, int *i, va_list list);
-int print_precision(const char *format, int *i, va_list list);
-int print_size(const char *format, int *i);
-int handle_print(const char *fmt, int *ind, va_list list, int flags, int width, int precision, int size);
 
 #endif
