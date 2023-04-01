@@ -8,10 +8,12 @@
 int print_char(va_list ap)
 {
 	char c = (char)va_arg(ap, int);
+	int count = 0;
 
 	if (c)
 	{
-		_putchar(c);
+		count = _putchar(c);
+		return (count);
 	}
-	return (1);
+	return (0);
 }
